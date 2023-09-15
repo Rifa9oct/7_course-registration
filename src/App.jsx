@@ -29,7 +29,7 @@ function App() {
       });
       const totalRemaining = 20 - hour;
       if(hour > 20){
-        toast.warn("You can add up to 20 hour", {
+        toast.warn("You can add up to 20 hour !", {
           position: toast.POSITION.TOP_RIGHT,
           theme: "dark"
         });
@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div className='flex justify-between'>
+      <div className='flex flex-col md:flex-row justify-between mb-16 md:mb-0'>
         <Courses 
         handleAddCourseName={handleAddCourseName}
         ToastContainer={ToastContainer}

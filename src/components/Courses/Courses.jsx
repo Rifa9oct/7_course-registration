@@ -13,7 +13,7 @@ const Courses = ({handleAddCourseName,ToastContainer}) => {
 
     return (
         <div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 mb-20">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-8 md:mb-20">
                 {
                     courses.map(course => <Course 
                         key={course.id} 
