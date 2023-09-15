@@ -7,6 +7,7 @@
 ## Project Features
 
 - Course Cart Functionality
+- Dynamic Course Rendering
 - Toast Notifications
 - Dynamic State Management with React Hooks
 

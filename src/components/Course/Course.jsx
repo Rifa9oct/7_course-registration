@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const Course = ({course,handleAddCourseName,ToastContainer}) => {
     const {course_img,course_name,details,price,credit} = course;
     return (
-        <div className='w-[312px] h-[402px] p-4 bg-white rounded-xl'>
+        <div className='w-[312px] h-[402px] p-4 bg-white rounded-xl mx-auto'>
             <img src={course_img} alt="" />
             <h1 className='font-semibold text-lg mt-4'>{course_name}</h1>
             <p className='text-sm text-[#1c1b1b99] mt-1 mb-4'>{details}</p>

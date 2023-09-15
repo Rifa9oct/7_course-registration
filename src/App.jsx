@@ -19,7 +19,8 @@ function App() {
     if(isExist){
       toast.warn("Already Exist !", {
         position: toast.POSITION.TOP_RIGHT,
-        theme: "dark"
+        theme: "dark",
+        autoClose: 3000
       });
     }
     else{
@@ -31,7 +32,8 @@ function App() {
       if(hour > 20){
         toast.warn("You can add up to 20 hour !", {
           position: toast.POSITION.TOP_RIGHT,
-          theme: "dark"
+          theme: "dark",
+          autoClose: 3000
         });
       }
       else{
@@ -42,7 +44,6 @@ function App() {
         setTotalPrice(totalAmount);
       }
     }
-    
   }
 
   return (
@@ -60,7 +61,6 @@ function App() {
         totalPrice={totalPrice}
         ></Cart>
       </div>
-      
     </>
   )
 }
