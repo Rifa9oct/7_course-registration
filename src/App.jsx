@@ -3,6 +3,8 @@ import './App.css'
 import Cart from './components/Cart/Cart'
 import Courses from './components/Courses/Courses'
 import Header from './components/Header/Header'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [addCourseName, setAddCourseName] = useState([]);
@@ -15,7 +17,10 @@ function App() {
     let totalAmount =course.price;
     let hour = course.credit;
     if(isExist){
-      return alert('already exist');
+      toast.warn("Already Exist !", {
+        position: toast.POSITION.TOP_RIGHT,
+        theme: "dark"
+      });
     }
     else{
       addCourseName.forEach(item => {
@@ -23,11 +28,19 @@ function App() {
         hour += item.credit;
       });
       const totalRemaining = 20 - hour;
-      const newAddCourseName = [...addCourseName,course];
-      setAddCourseName(newAddCourseName);
-      setRemainingHour(totalRemaining);
-      setTotalHour(hour);
-      setTotalPrice(totalAmount);
+      if(hour > 20){
+        toast.warn("You can add up to 20 hour", {
+          position: toast.POSITION.TOP_RIGHT,
+          theme: "dark"
+        });
+      }
+      else{
+        const newAddCourseName = [...addCourseName,course];
+        setAddCourseName(newAddCourseName);
+        setRemainingHour(totalRemaining);
+        setTotalHour(hour);
+        setTotalPrice(totalAmount);
+      }
     }
     
   }
@@ -36,7 +49,10 @@ function App() {
     <>
       <Header></Header>
       <div className='flex justify-between'>
-        <Courses handleAddCourseName={handleAddCourseName}></Courses>
+        <Courses 
+        handleAddCourseName={handleAddCourseName}
+        ToastContainer={ToastContainer}
+        ></Courses>
         <Cart 
         addCourseName={addCourseName}
         remainingHour={remainingHour}

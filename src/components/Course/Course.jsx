@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Course = ({course,handleAddCourseName}) => {
+const Course = ({course,handleAddCourseName,ToastContainer}) => {
     const {course_img,course_name,details,price,credit} = course;
     return (
         <div className='w-[312px] h-[402px] p-4 bg-white rounded-xl'>
@@ -23,13 +23,15 @@ const Course = ({course,handleAddCourseName}) => {
                 </div>
             </div>
             <button onClick={() => handleAddCourseName(course)} className='bg-[#2F80ED] mt-6 py-2 text-white rounded-lg w-[280px]'>Select</button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
 
 Course.propTypes = {
     course: PropTypes.object.isRequired,
-    handleAddCourseName: PropTypes.func
+    handleAddCourseName: PropTypes.func,
+    ToastContainer: PropTypes.elementType
 };
 
 export default Course;
