@@ -29,16 +29,9 @@ function App() {
       });
       const totalRemaining = 20 - hour;
       if(hour > 20 ){
-        toast.warn("You can add up to 20 hour !", {
+        toast.error("You can take up to 20 credit hour", {
           position: toast.POSITION.TOP_RIGHT,
           theme: "dark"
-        });
-      }
-
-      if(totalRemaining < 0 && hour >=20){
-        toast.error("So you can't take it anymore.", {
-          position: toast.POSITION.TOP_RIGHT,
-          theme: "dark",
         });
       }
 
