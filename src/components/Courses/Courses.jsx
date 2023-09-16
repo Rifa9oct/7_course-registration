@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../Course/Course";
 
-const Courses = ({handleAddCourseName,ToastContainer}) => {
+const Courses = ({handleAddCourseName}) => {
     const [courses, setCourses] =useState([]);
     useEffect(() =>{
         fetch('course.json')
@@ -19,7 +19,6 @@ const Courses = ({handleAddCourseName,ToastContainer}) => {
                         key={course.id} 
                         course={course}
                         handleAddCourseName={handleAddCourseName}
-                        ToastContainer={ToastContainer}
                         ></Course>)
                 } 
             </div>
@@ -27,8 +26,7 @@ const Courses = ({handleAddCourseName,ToastContainer}) => {
     );
 };
 Courses.propTypes = {
-    handleAddCourseName: PropTypes.func,
-    ToastContainer: PropTypes.elementType
+    handleAddCourseName: PropTypes.func
 };
 
 export default Courses;

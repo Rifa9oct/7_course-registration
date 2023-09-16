@@ -19,8 +19,7 @@ function App() {
     if(isExist){
       toast.warn("Already Exist !", {
         position: toast.POSITION.TOP_RIGHT,
-        theme: "dark",
-        autoClose: 3000
+        theme: "dark"
       });
     }
     else{
@@ -29,13 +28,20 @@ function App() {
         hour += item.credit;
       });
       const totalRemaining = 20 - hour;
-      if(hour > 20){
+      if(hour > 20 ){
         toast.warn("You can add up to 20 hour !", {
           position: toast.POSITION.TOP_RIGHT,
-          theme: "dark",
-          autoClose: 3000
+          theme: "dark"
         });
       }
+
+      if(totalRemaining < 0 && hour >=20){
+        toast.error("So you can't take it anymore.", {
+          position: toast.POSITION.TOP_RIGHT,
+          theme: "dark",
+        });
+      }
+
       else{
         const newAddCourseName = [...addCourseName,course];
         setAddCourseName(newAddCourseName);
@@ -52,7 +58,6 @@ function App() {
       <div className='flex flex-col md:flex-row justify-between mb-16 md:mb-0'>
         <Courses 
         handleAddCourseName={handleAddCourseName}
-        ToastContainer={ToastContainer}
         ></Courses>
         <Cart 
         addCourseName={addCourseName}
@@ -60,6 +65,7 @@ function App() {
         totalHour={totalHour}
         totalPrice={totalPrice}
         ></Cart>
+        <ToastContainer/>
       </div>
     </>
   )
