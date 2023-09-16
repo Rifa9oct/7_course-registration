@@ -29,7 +29,7 @@ function App() {
       });
       const totalRemaining = 20 - hour;
       if(hour > 20 ){
-        toast.error("You can take up to 20 credit hour", {
+        toast.error("You can take up to 20 credit hour.", {
           position: toast.POSITION.TOP_RIGHT,
           theme: "dark"
         });
@@ -46,21 +46,21 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Header></Header>
-      <div className='flex flex-col md:flex-row justify-between mb-16 md:mb-0'>
-        <Courses 
-        handleAddCourseName={handleAddCourseName}
-        ></Courses>
-        <Cart 
-        addCourseName={addCourseName}
-        remainingHour={remainingHour}
-        totalHour={totalHour}
-        totalPrice={totalPrice}
-        ></Cart>
-        <ToastContainer/>
+      <div className='flex flex-col md:flex-row justify-center lg:justify-between gap-6 mb-16 md:mb-0'>
+          <Courses 
+          handleAddCourseName={handleAddCourseName}
+          ></Courses>
+          <Cart 
+          addCourseName={addCourseName}
+          remainingHour={remainingHour}
+          totalHour={totalHour}
+          totalPrice={totalPrice}
+          ></Cart>
+          <ToastContainer/>
       </div>
-    </>
+    </div>
   )
 }
 
