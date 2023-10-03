@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "course_img": "https://i.ibb.co/JRqhwBs/Rectangle-2-2.png",
+      "course_img": "https://i.ibb.co/7N1ZMwJ/Rectangle-2-2.png",
       "course_name": "Introduction to C Programming",
       "credit": 1,
       "price": 15000,
@@ -9,7 +9,7 @@
     },
     {
       "id": "2",
-      "course_img": "https://i.ibb.co/GP87BGy/Rectangle-2-3.png",
+      "course_img": "https://i.ibb.co/nPX1dtr/Rectangle-2-3.png",
       "course_name": "Introduction to Algorithms",
       "credit": 2,
       "price": 25000,
@@ -17,7 +17,7 @@
     },
     {
       "id": "3",
-      "course_img": "https://i.ibb.co/89dR53C/Rectangle-2-4.png",
+      "course_img": "https://i.ibb.co/CBpmWdH/Rectangle-2-4.png",
       "course_name": "Introduction to C++ for DSA",
       "credit": 10,
       "price": 10000,
@@ -25,7 +25,7 @@
     },
     {
       "id": "4",
-      "course_img": "https://i.ibb.co/Tr5QmBN/Rectangle-3.png",
+      "course_img": "https://i.ibb.co/m4rDfPx/Rectangle-3.png",
       "course_name": "Basic Data Structures",
       "credit": 5,
       "price": 35000,
@@ -33,7 +33,7 @@
     },
     {
       "id": "5",
-      "course_img": "https://i.ibb.co/hFxDSyC/Rectangle-2.png",
+      "course_img": "https://i.ibb.co/XttFWqN/Rectangle-2.png",
       "course_name": "Introduction to OOP Python",
       "credit": 5,
       "price": 19000,
@@ -41,7 +41,7 @@
     },
     {
       "id": "6",
-      "course_img": "https://i.ibb.co/26tQdnc/Rectangle-2-5.png",
+      "course_img": "https://i.ibb.co/QjjnLRn/Rectangle-2-5.png",
       "course_name": "Software Engineering",
       "credit": 2,
       "price": 23000,
@@ -49,7 +49,7 @@
     },
     {
       "id": "7",
-      "course_img": "https://i.ibb.co/7gnZbZb/Rectangle-3-1.png",
+      "course_img": "https://i.ibb.co/cLsXC5r/Rectangle-3-1.png",
       "course_name": "AWS, Cloud Computing",
       "credit": 5,
       "price": 35000,
@@ -57,7 +57,7 @@
     },
     {
       "id": "8",
-      "course_img": "https://i.ibb.co/kckj9bz/Rectangle-2-1.png",
+      "course_img": "https://i.ibb.co/r73qgGr/Rectangle-2-1.png",
       "course_name": "Database (MySQL)",
       "credit": 5,
       "price": 19000,
@@ -65,7 +65,7 @@
     },
     {
       "id": "9",
-      "course_img": "https://i.ibb.co/7rv9hwL/Rectangle-2-6.png",
+      "course_img": "https://i.ibb.co/HDDDwjF/Rectangle-2-6.png",
       "course_name": "Problem-Solving Part",
       "credit": 2,
       "price": 23000,
